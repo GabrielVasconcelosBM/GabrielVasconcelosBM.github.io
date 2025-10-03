@@ -98,12 +98,14 @@ function calcularRV() {
 
 	//Escolher a base de cálculo
 	if (qtdVendas < 8){
-		valorComissão = 0;
+		mult15k = 0;
+		mult20k = 0;
+		mult25k = 0;
 	} else if (qtdVendas >= 8 & qtdVendas <10){
 		mult15k = 20;
 		mult20k = 35;
 		mult25k = 60;
-	} else if (qtdVendas >= 10 & qtdVendas <10){
+	} else if (qtdVendas >= 10 & qtdVendas <12){
 		mult15k = 50;
 		mult20k = 100;
 		mult25k = 200;
@@ -136,6 +138,7 @@ function calcularRV() {
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
 
 
