@@ -1,6 +1,6 @@
 function calcularRV() {
     let prod = parseFloat(document.getElementById("prod").value) || 0;
-	let Semana1 = parseFloat(document.getElementById("Semana1").value) || 0;
+	let semana1 = parseFloat(document.getElementById("semana1").value) || 0;
     let clientes = parseInt(document.getElementById("clientes").value) || 0;
     let visitas = parseInt(document.getElementById("visitas").value) || 0;
     let m1_medio = parseFloat(document.getElementById("m1_medio").value) || 0;
@@ -9,6 +9,7 @@ function calcularRV() {
     let clientes_m2 = parseInt(document.getElementById("clientes_m2").value) || 0;
     
     let valorComissao = 0;
+	let valorsemana1 = 0;
 
     // Definição do valor comissão 
     if (prod < 0.3) {
@@ -20,16 +21,16 @@ function calcularRV() {
     }
 	
 	  // Definição do valor Semana1
-	if (Semana1 < 2) {
-		valorSemana1 = 0;
-	} else if (Semana1 >= 2 & Semana1 < 3) {
-		valorSemana1 = 100;
-	} else if (Semana1 >= 3 & Semana1 < 5) {
+	if (semana1 < 2) {
+		valorsemana1 = 0;
+	} else if (semana1 >= 2 & Semana1 < 3) {
+		valorsemana1 = 100;
+	} else if (semana1 >= 3 & Semana1 < 5) {
 		valorSemana1 = 450;
-	} else if (Semana1 >= 5 & Semana1 < 7) {
-		valorSemana1 = 550;
-	} else if (Semana1 >= 7) {
-		valorSemana1 = 700;
+	} else if (semana1 >= 5 & Semana1 < 7) {
+		valorsemana1 = 550;
+	} else if (semana1 >= 7) {
+		valorsemana1 = 700;
 	}
 
 
@@ -80,12 +81,13 @@ function calcularRV() {
         <h3>Resultado:</h3>
         <p><strong>Salário Fixo:</strong> <span>R$ ${salarioFixo.toFixed(2)}</span></p>
         <p><strong>Ajuda de Custo:</strong> <span>R$ ${ajudaCusto.toFixed(2)}</span></p>
-		<p><strong>Semana 1:</strong> <span>R$ ${Semana1.toFixed(2)}</span></p>
+		<p><strong>Semana 1:</strong> <span>R$ ${semana1.toFixed(2)}</span></p>
         <p><strong>Valor Comissão:</strong> <span>R$ ${valorComissao.toFixed(2)}</span></p>
         <p><strong>Valor Premiação:</strong> <span>R$ ${valorPremiacao.toFixed(2)}</span></p>
         <p><strong>Valor Bônus:</strong> <span>R$ ${bonus.toFixed(2)}</span></p>
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
 
