@@ -117,7 +117,7 @@ function calcularRV() {
 
 	
     // Soma final
-    let totalRV = salarioFixo + ajudaCusto + valorPremiacao;
+    let totalRV = salarioFixo + ajudaCusto + valorPremiacao + valorComissao;
 
     // Exibição dos resultados separados
     document.getElementById("resultado").innerHTML = `
@@ -134,6 +134,7 @@ function calcularRV() {
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
 
 
