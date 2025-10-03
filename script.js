@@ -115,7 +115,7 @@ function calcularRV() {
 
 
 	// Valor de comissão
-	let valorComissão = qtd15k*mult15k + qtd20k*mult20k + qtd25k*mult25k;
+	let valorComissao = qtd15k*mult15k + qtd20k*mult20k + qtd25k*mult25k;
 
 	
     // Soma final
@@ -136,6 +136,7 @@ function calcularRV() {
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
 
 
