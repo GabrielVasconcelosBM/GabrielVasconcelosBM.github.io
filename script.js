@@ -1,9 +1,5 @@
 function calcularRV() {
     let Semana1 = parseInt(document.getElementById("prod").value) || 0;
-    let Semana2 = parseInt(document.getElementById("clientes").value) || 0;
-    let Semana3 = parseInt(document.getElementById("visitas").value) || 0;
-	let Semana4 = parseInt(document.getElementById("clientes").value) || 0;
-	let Semana5 = parseInt(document.getElementById("clientes").value) || 0;
 	
     let m1_medio = parseFloat(document.getElementById("m1_medio").value) || 0;
     let clientes_m1 = parseInt(document.getElementById("clientes_m1").value) || 0;
@@ -65,7 +61,7 @@ function calcularRV() {
     const ajudaCusto = 850.00;
 	
     // Soma final
-    let totalRV = salarioFixo + ajudaCusto + valorComissao + valorPremiacao + bonus;
+    let totalRV = salarioFixo + ajudaCusto + valorSemana1 + valorPremiacao + bonus;
 
     // Exibição dos resultados separados
     document.getElementById("resultado").innerHTML = `
@@ -78,4 +74,5 @@ function calcularRV() {
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
