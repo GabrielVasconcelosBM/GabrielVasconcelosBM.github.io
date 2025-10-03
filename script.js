@@ -1,5 +1,5 @@
 function calcularRV() {
-    let Semana1 = parseInt(document.getElementById("prod").value) || 0;
+    let Semana1 = parseInt(document.getElementById("Semana1").value) || 0;
 	
     let m1_medio = parseFloat(document.getElementById("m1_medio").value) || 0;
     let clientes_m1 = parseInt(document.getElementById("clientes_m1").value) || 0;
@@ -74,5 +74,6 @@ function calcularRV() {
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
 
