@@ -97,11 +97,7 @@ function calcularRV() {
     const ajudaCusto = 850.00;
 
 	//Escolher a base de cálculo
-	if (qtdVendas < 8){
-		mult15k = 0;
-		mult20k = 0;
-		mult25k = 0;
-	} else if (qtdVendas >= 8 & qtdVendas <10){
+	if (qtdVendas >= 8 & qtdVendas <10){
 		mult15k = 20;
 		mult20k = 35;
 		mult25k = 60;
@@ -138,6 +134,7 @@ function calcularRV() {
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
 
 
