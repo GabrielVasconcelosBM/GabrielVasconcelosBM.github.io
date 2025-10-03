@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h2>Calculadora de RV</h2>
-	<h2>Comissão</h2>
+	<h2>Premiação</h2>
 
 		<label for="semana1">Semana 1:</label>
         <input type="number" id="semana1" min="0">
@@ -25,6 +25,20 @@
 
 		<label for="semana5">Semana 5:</label>
         <input type="number" id="semana5" min="0">
+		
+	<h2>Comissão</h2>
+		
+		<label for="qtdVendas">Qtd Vendas:</label>
+       	<input type="number" id="qtdVendas" min="0">
+		
+		<label for="qtd15k">Qtd Clientes 15k:</label>
+       	<input type="number" id="qtd15k" min="0">
+		
+		<label for="qtd20k">Qtd Clientes 20k:</label>
+       	<input type="number" id="qtd20k" min="0">
+		
+		<label for="qtd25k">Qtd Clientes 25k:</label>
+       	<input type="number" id="qtd25k" min="0">
 		<button onclick="calcularRV()">Calcular</button>
 
         <p id="resultado"></p>
@@ -33,6 +47,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
