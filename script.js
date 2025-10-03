@@ -18,6 +18,21 @@ function calcularRV() {
     } else {
         valorComissao = clientes*50;
     }
+	
+	  // Definição do valor Semana1
+	if (Semana1 < 2) {
+		valorSemana1 = 0;
+	} else if (Semana1 >= 2 & Semana1 < 3) {
+		valorSemana1 = 100;
+	} else if (Semana1 >= 3 & Semana1 < 5) {
+		valorSemana1 = 450;
+	} else if (Semana1 >= 5 & Semana1 < 7) {
+		valorSemana1 = 550;
+	} else if (Semana1 >= 7) {
+		valorSemana1 = 700;
+	}
+
+
 
     // Definição do valor base para premiação
     let valorBase = 0;
@@ -72,4 +87,5 @@ function calcularRV() {
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
