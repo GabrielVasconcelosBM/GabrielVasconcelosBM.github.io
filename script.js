@@ -5,7 +5,6 @@ function calcularRV() {
 	let semana4 = parseInt(document.getElementById("semana4").value) || 0;
 	let semana5 = parseInt(document.getElementById("semana5").value) || 0;
     
-    let valorComissao = 0;
 	let valorPremiacao = 0;
 	let valorsemana1 = 0;
 	let valorsemana2 = 0;
@@ -108,6 +107,7 @@ function calcularRV() {
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
 
 
