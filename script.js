@@ -5,7 +5,7 @@ function calcularRV() {
 	let semana4 = parseInt(document.getElementById("semana4").value) || 0;
 	let semana5 = parseInt(document.getElementById("semana5").value) || 0;
     
-	let valorPremiacao = 0;
+	let valorComissao = 0;
 	let valorsemana1 = 0;
 	let valorsemana2 = 0;
 	let valorsemana3 = 0;
@@ -84,14 +84,14 @@ function calcularRV() {
 	}
 
 	// Definição do valor de Comissao
-	let valorComissao = valorsemana1 + valorsemana2 + valorsemana3 + valorsemana4 + valorsemana5;
+	let valorPremiacao = valorsemana1 + valorsemana2 + valorsemana3 + valorsemana4 + valorsemana5;
 	
     // Salário fixo e ajuda de custo
     const salarioFixo = 1686.14;
     const ajudaCusto = 850.00;
 	
     // Soma final
-    let totalRV = salarioFixo + ajudaCusto + valorComissao;
+    let totalRV = salarioFixo + ajudaCusto + valorPremiacao;
 
     // Exibição dos resultados separados
     document.getElementById("resultado").innerHTML = `
@@ -103,10 +103,11 @@ function calcularRV() {
 		<p><strong>Semana 3:</strong> <span>R$ ${valorsemana3.toFixed(2)}</span></p>
 		<p><strong>Semana 4:</strong> <span>R$ ${valorsemana4.toFixed(2)}</span></p>
 		<p><strong>Semana 5:</strong> <span>R$ ${valorsemana5.toFixed(2)}</span></p>
-        <p><strong>Valor Comissão:</strong> <span>R$ ${valorComissao.toFixed(2)}</span></p>
+        <p><strong>Valor Premiação:</strong> <span>R$ ${valorPremiacao.toFixed(2)}</span></p>
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
 
 
