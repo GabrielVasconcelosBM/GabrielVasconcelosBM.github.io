@@ -4,13 +4,19 @@ function calcularRV() {
 	let semana3 = parseInt(document.getElementById("semana3").value) || 0;
 	let semana4 = parseInt(document.getElementById("semana4").value) || 0;
 	let semana5 = parseInt(document.getElementById("semana5").value) || 0;
+	let qtdVendas = parseInt(document.getElementById("qtdVendas").value) || 0;
+	let qtd15k = parseInt(document.getElementById("qtd15k").value) || 0;
+	let qtd20k = parseInt(document.getElementById("qtd20k").value) || 0;
+	let qtd25k = parseInt(document.getElementById("qtd25k").value) || 0;
     
-	let valorComissao = 0;
 	let valorsemana1 = 0;
 	let valorsemana2 = 0;
 	let valorsemana3 = 0;
 	let valorsemana4 = 0;
 	let valorsemana5 = 0;
+	let mult15k = 0;
+	let mult20k = 0;
+	let mult25k = 0;
 
 	
 	// Definição do valor Semana1
@@ -83,12 +89,34 @@ function calcularRV() {
 		valorsemana5 = 700;
 	}
 
-	// Definição do valor de Comissao
+	// Definição do valor de Premiação
 	let valorPremiacao = valorsemana1 + valorsemana2 + valorsemana3 + valorsemana4 + valorsemana5;
 	
     // Salário fixo e ajuda de custo
     const salarioFixo = 1686.14;
     const ajudaCusto = 850.00;
+
+	//Escolher a base de cálculo
+	if (qtdVendas < 8){
+		valorComissão = 0;
+	} else if (qtdVendas >= 8 & qtdVendas <10){
+		mult15k = 20
+		mult20k = 35
+		mult25k = 60;
+	} else if (qtdVendas >= 10 & qtdVendas <10){
+		mult15k = 50
+		mult20k = 100
+		mult25k = 200;
+	} else if (qtdVendas >= 12){
+		mult15k = 60
+		mult20k = 130
+		mult25k = 250;
+	}
+
+
+	// Valor de comissão
+	let valorComissão = qtd15k*mult15k + qtd20k*mult20k + qtd25k*mult25k;
+
 	
     // Soma final
     let totalRV = salarioFixo + ajudaCusto + valorPremiacao;
@@ -104,9 +132,11 @@ function calcularRV() {
 		<p><strong>Semana 4:</strong> <span>R$ ${valorsemana4.toFixed(2)}</span></p>
 		<p><strong>Semana 5:</strong> <span>R$ ${valorsemana5.toFixed(2)}</span></p>
         <p><strong>Valor Premiação:</strong> <span>R$ ${valorPremiacao.toFixed(2)}</span></p>
+		<p><strong>Valor Comissão:</strong> <span>R$ ${valorComissao.toFixed(2)}</span></p>
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
 
 
