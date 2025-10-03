@@ -26,7 +26,7 @@ function calcularRV() {
 	} else if (semana1 >= 2 & semana1 < 3) {
 		valorsemana1 = 100;
 	} else if (semana1 >= 3 & semana1 < 5) {
-		valorSemana1 = 450;
+		valorsemana1 = 450;
 	} else if (semana1 >= 5 & semana1 < 7) {
 		valorsemana1 = 550;
 	} else if (semana1 >= 7) {
@@ -88,6 +88,7 @@ function calcularRV() {
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
 
 
