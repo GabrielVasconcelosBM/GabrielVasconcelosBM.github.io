@@ -81,13 +81,14 @@ function calcularRV() {
         <h3>Resultado:</h3>
         <p><strong>Salário Fixo:</strong> <span>R$ ${salarioFixo.toFixed(2)}</span></p>
         <p><strong>Ajuda de Custo:</strong> <span>R$ ${ajudaCusto.toFixed(2)}</span></p>
-		<p><strong>Semana 1:</strong> <span>R$ ${semana1.toFixed(2)}</span></p>
+		<p><strong>Semana 1:</strong> <span>R$ ${valorsemana1.toFixed(2)}</span></p>
         <p><strong>Valor Comissão:</strong> <span>R$ ${valorComissao.toFixed(2)}</span></p>
         <p><strong>Valor Premiação:</strong> <span>R$ ${valorPremiacao.toFixed(2)}</span></p>
         <p><strong>Valor Bônus:</strong> <span>R$ ${bonus.toFixed(2)}</span></p>
         <p><strong>Total Final:</strong> <span>R$ ${totalRV.toFixed(2)}</span></p>
     `;
 }
+
 
 
 
